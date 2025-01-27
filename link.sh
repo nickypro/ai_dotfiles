@@ -4,22 +4,13 @@ echo "Setting up environment..."
 
 # Clone dotfiles repository
 cd ~
-git clone https://github.com/yourusername/dotfiles.git
+git clone https://github.com/nickypro/ai_dotfiles.git
 
 # Create symbolic links
-ln -sf ~/dotfiles/.zshrc ~/.zshrc
-ln -sf ~/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
-
-# Install essential packages
-sudo apt-get update && sudo apt-get install -y \
-    zsh \
-    git \
-    curl \
-    tmux \
-    neovim \
-    python3-pip
+ln -sf ~/ai_dotfiles/.zshrc ~/.zshrc
+ln -sf ~/ai_dotfiles/.vimrc ~/.vimrc
+ln -sf ~/ai_dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/ai_dotfiles/.p10k.zsh ~/.p10k.zsh
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
