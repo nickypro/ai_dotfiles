@@ -86,7 +86,7 @@ plugins=(
     zsh-history-substring-search
 )
 
-
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
