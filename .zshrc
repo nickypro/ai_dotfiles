@@ -118,7 +118,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 cd /workspace
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
