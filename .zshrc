@@ -118,13 +118,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 cd /workspace
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda/lib64
 export PATH="$HOME/.local/bin:$PATH"
 alias py="poetry run python"
-export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 alias t0="tmux attach -t 0 || tmux new -s 0"
