@@ -12,6 +12,14 @@ ln -sf ~/ai_dotfiles/.vimrc ~/.vimrc
 ln -sf ~/ai_dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/ai_dotfiles/.p10k.zsh ~/.p10k.zsh
 
+sudo apt-get update && sudo apt-get install -y \
+    zsh \
+    git \
+    curl \
+    tmux \
+    neovim \
+    python3-pip
+
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
