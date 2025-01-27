@@ -6,20 +6,6 @@ echo "Setting up environment..."
 cd ~
 git clone https://github.com/nickypro/ai_dotfiles.git
 
-# Create symbolic links
-ln -sf ~/ai_dotfiles/.zshrc ~/.zshrc
-ln -sf ~/ai_dotfiles/.vimrc ~/.vimrc
-ln -sf ~/ai_dotfiles/.gitconfig ~/.gitconfig
-ln -sf ~/ai_dotfiles/.p10k.zsh ~/.p10k.zsh
-
-sudo apt-get update && sudo apt-get install -y \
-    zsh \
-    git \
-    curl \
-    tmux \
-    neovim \
-    python3-pip
-
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -29,6 +15,12 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 # Install Zsh plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Create symbolic links
+ln -sf ~/ai_dotfiles/.zshrc ~/.zshrc
+ln -sf ~/ai_dotfiles/.vimrc ~/.vimrc
+ln -sf ~/ai_dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/ai_dotfiles/.p10k.zsh ~/.p10k.zsh
 
 # Reload Zsh to apply changes
 source ~/.zshrc
