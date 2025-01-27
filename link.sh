@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo "Setting up environment..."
+
+# Clone dotfiles repository
+cd ~
+git clone https://github.com/yourusername/dotfiles.git
+
+# Create symbolic links
+ln -sf ~/dotfiles/.zshrc ~/.zshrc
+ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
+
+# Install essential packages
+sudo apt-get update && sudo apt-get install -y \
+    zsh \
+    git \
+    curl \
+    tmux \
+    neovim \
+    python3-pip
+
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Powerlevel10k theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# Install Zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Reload Zsh to apply changes
+source ~/.zshrc
+
