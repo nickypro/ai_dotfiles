@@ -1,0 +1,16 @@
+[user]
+	name = Nicky Pochinkov
+	email = work@nicky.pro
+[alias]
+        aa = add --all
+        br = branch -vv
+        ci = commit
+        cim = commit -m
+        cima = commit -am
+        co = checkout
+        nb = checkout -b
+        lg = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset' -20
+        r = remote -v
+        st = status -sb
+        unstage = reset HEAD
+        uncommit = reset --soft HEAD^
